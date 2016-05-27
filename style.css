@@ -1,0 +1,22 @@
+.nav-wrapper .name {
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.about p {
+  /*font-family: 'Alegreya Sans', sans-serif;*/
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bolder;
+  font-size: 34px;
+}
+
+nav {
+  background-color: white;
+  box-shadow: none;
+}
+
+.nav-wrapper a {
+  color: #333;
+  font-family: 'Alegreya Sans', sans-serif;
+}
