@@ -13,11 +13,12 @@
   /*font-family: 'Alegreya Sans', sans-serif;*/
   font-family: 'Fira Sans', sans-serif;
   font-weight: bolder;
-  font-size: 34px;
+  font-size: 40px;
 }
 
 h1 {
   font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
 }
 
 h2 {
@@ -75,4 +76,6 @@ nav {
 
 footer.page-footer {
   margin-top: 0px;
+  background: #3F3F3F;
+  font-family: 'Alegreya Sans', sans-serif;
 }
