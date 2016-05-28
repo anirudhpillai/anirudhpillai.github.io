@@ -4,11 +4,25 @@
   font-size: 24px;
 }
 
+.projects p {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 20px;
+}
+
 .about p {
   /*font-family: 'Alegreya Sans', sans-serif;*/
   font-family: 'Fira Sans', sans-serif;
   font-weight: bolder;
   font-size: 34px;
+}
+
+h1 {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+h2 {
+  font-family: 'Fira Sans', sans-serif;
+  color: white;
 }
 
 nav {
@@ -31,4 +45,34 @@ nav {
   position: relative;
   top: 7px;
   left: 8px;
+}
+
+.domus {
+  background: #EE7073;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.dss {
+  background: #80B1CC;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.dss h2 {
+  padding-bottom: 40px;
+}
+
+.uclhub {
+  background: #25A3D6;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.chip {
+  margin-top: 6px;
+}
+
+footer.page-footer {
+  margin-top: 0px;
 }
