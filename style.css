@@ -25,6 +25,15 @@ h1 {
 h2 {
   font-family: 'Fira Sans', sans-serif;
   color: white;
+  text-align: center;
+}
+
+.link-header {
+  color: white;
+}
+
+.link-header:hover {
+  text-decoration: underline;
 }
 
 nav {
@@ -61,8 +70,8 @@ nav {
   padding-bottom: 40px;
 }
 
-.dss h2 {
-  padding-bottom: 40px;
+.uclhub h2, .dss h2 {
+  padding-bottom: 20px;
 }
 
 .uclhub {
@@ -75,8 +84,13 @@ nav {
   margin-top: 6px;
 }
 
+.top-space {
+  margin-top: 20px;
+}
+
 footer.page-footer {
   margin-top: 0px;
   background: #3F3F3F;
   font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
 }
