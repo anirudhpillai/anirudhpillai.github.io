@@ -1,7 +1,9 @@
-.nav-wrapper .name {
+.name {
   font-family: 'Alegreya', serif;
   font-style: italic;
   font-size: 24px;
+  text-align: center;
+  display: block;
 }
 
 .projects p {
@@ -13,9 +15,13 @@
   padding-top: 20px;
 }
 
+.card {
+  padding: 20px 40px 20px 40px;
+}
+
 .about p {
-  /*font-family: 'Alegreya Sans', sans-serif;*/
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
+  /*font-family: 'Fira Sans', sans-serif;*/
   font-weight: bolder;
   font-size: 40px;
   padding-top: 60px;
