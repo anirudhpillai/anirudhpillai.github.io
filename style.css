@@ -15,10 +15,6 @@
   padding-top: 20px;
 }
 
-.card {
-  padding: 20px 40px 20px 40px;
-}
-
 .about p {
   font-family: 'Alegreya Sans', sans-serif;
   /*font-family: 'Fira Sans', sans-serif;*/
@@ -60,6 +56,14 @@ nav {
 .btn-floating {
   background-color: #F4F4F4;
   margin-right: 6px;
+}
+
+.about .btn {
+  background-color: #F4F4F4;
+  color: #333;
+  font-weight: bold;
+  padding-left: 12px;
+  padding-right: 16px;
 }
 
 .git {
