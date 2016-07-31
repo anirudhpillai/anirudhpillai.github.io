@@ -37,7 +37,7 @@
             <a href="http://uk.linkedin.com/in/anirudhpillai" target="_blank" class="btn-floating waves-effect waves-light"><img class="responsive-img" src="https://cdn4.iconfinder.com/data/icons/miu-social/60/linkedin-social-media-128.png" alt="" /></a>
             <a href="https://twitter.com/__anirudh__" target="_blank" class="btn-floating waves-effect waves-light"><img class="git" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/03-twitter-128.png" alt="" /></a>
             <a href="#contact" class="btn-floating waves-effect waves-light"><img class="git" src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/mail-24-128.png" alt="" /></a>
-            <a target="_blank" class="btn waves-effect waves-light" href="https://docs.google.com/document/d/1B9VGeq06nVuPg6yJNpv3iEcv6EdcNDHy6DT8oN9_P4I/edit?usp=sharing"><i class="material-icons left">perm_identity</i>RESUME</a>
+            <a target="_blank" class="btn waves-effect waves-light" href="https://drive.google.com/file/d/0B2lmdWoVpNplMkRpSExuTVE4S2c/view?usp=sharing" onclick="test()"><i class="material-icons left">perm_identity</i>RESUME</a>
           </div>
           <div class="col s4">
             <img src="profile.jpg" class="responsive-img" alt="" />
@@ -226,5 +226,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script type="text/javascript">
+      function test(){
+        ga('send', 'event', 'PDF', 'view', 'Resume');
+      }
+    </script>
   </body>
 </html>
