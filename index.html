@@ -55,9 +55,13 @@
     <div class="projects" id="projects">
       <div class="container">
         <h1>Projects</h1>
+
+        <div class="tiles" id="tiles">
+        </div>
+
       </div>
 
-      <div class="kickabout">
+      <div id="kickabout" class="kickabout" style="display:none">
         <div class="container">
           <h2><a class="link-header" href="http://m.me/kickaboutapp" target="_blank">Kickabout Messenger Bot</a></h1>
             <div class="row">
@@ -145,12 +149,13 @@
               </div>
             </div>
 
+            <button class="btn" onclick="less('kickabout')">All Projects</button>
         </div>
       </div>
 
-      <div class="dss">
+      <div id="dss" class="dss" style="display:none">
         <div class="container">
-          <h2><a class="link-header" href="https://aviato-dss.herokuapp.com" target="_blank">Microsoft Data Science Hackathon</a></h1>
+          <h2><a class="link-header" href="https://aviato-dss.herokuapp.com" target="_blank">Better Living London</a></h1>
             <div class="row">
               <div class="col s8">
                 <img src="dss.png" class="responsive-img z-depth-2" alt="" />
@@ -171,10 +176,11 @@
                 </div>
               </div>
             </div>
+            <button class="btn" onclick="less('dss')">All Projects</button>
         </div>
       </div>
 
-      <div class="uclhub">
+      <div id="uclhub" class="uclhub" style="display:none">
         <div class="container">
           <h2><a class="link-header" href="uclhub.herokuapp.com" target="_blank">UCL Heritage Hub</a></h1>
             <div class="row">
@@ -206,6 +212,7 @@
                 </div>
               </div>
             </div>
+            <button class="btn" onclick="less('uclhub')">All Projects</button>
         </div>
       </div>
     </div>
@@ -230,6 +237,54 @@
       function test(){
         ga('send', 'event', 'PDF', 'view', 'Resume');
       }
+
+      function generateTile(title, subtitle, bgcolor, more){
+         var card = document.createElement("div");
+         card.className = "card";
+         card.style.background = bgcolor;
+         var h2 = document.createElement("h2");
+         h2.innerHTML = title;
+         var p = document.createElement("p");
+         p.innerHTML = subtitle;
+
+         card.appendChild(h2);
+         card.appendChild(p);
+
+         card.addEventListener('click', function(){
+           tiles.style.display = 'none';
+           more.style.display = 'block';
+         })
+         return card
+      }
+
+      function less(id){
+        var item = document.getElementById(id);
+        item.style.display = 'none';
+        tiles.style.display = 'block';
+      }
+
+      var kickabout = document.getElementById('kickabout');
+      var dss = document.getElementById('dss');
+      var uclhub = document.getElementById('uclhub');
+
+      var tiles = document.getElementById('tiles');
+      tiles.appendChild(generateTile(
+                        "Kickabout Messenger Bot",
+                        'A messenger bot to find and join football games.',
+                        '#1ED760', kickabout))
+      tiles.appendChild(generateTile(
+                        "Better Living London",
+                        'Some bot',
+                        '#6fc3df', dss))
+      // tiles.appendChild(generateTile(
+      //                   "FaceLock",
+      //                   'Chrome extension to add face locking to specific websites.',
+      //                   '#795548', facelock))
+      tiles.appendChild(generateTile(
+                        "UCL Hub",
+                        'Website for Archaeological Events',
+                        '#25A3D6', uclhub))
+
     </script>
   </body>
 </html>
