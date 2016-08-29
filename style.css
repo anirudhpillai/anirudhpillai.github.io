@@ -2,6 +2,11 @@ body {
   background: #ededed;
 }
 
+div {
+  -webkit-transition: width 2s; /* Safari */
+  transition: width 2s;
+}
+
 .name {
   font-family: 'Alegreya', serif;
   font-style: italic;
