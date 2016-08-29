@@ -55,10 +55,37 @@
     <div class="projects" id="projects">
       <div class="container">
         <h1>Projects</h1>
+      </div>
 
-        <div class="tiles" id="tiles">
+      <div class="tiles" id="tiles">
+        <div class="row">
+          <div class="col l8" style="background:#1ED760" onclick="more('kickabout')">
+            <h2>Kickabout Messenger Bot</h2>
+            <p>
+              A messenger bot to find and join football games.
+            </p>
+          </div>
+          <div class="col l4" style="background:#795548">
+            <h2>FaceLock</h2>
+            <p>
+              Chrome extension to add face locking to specific websites.
+            </p>
+          </div>
         </div>
-
+        <div class="row">
+          <div class="col l6" style="background:#25A3D6" onclick="more('uclhub')">
+            <h2>UCL Hub</h2>
+            <p>
+              Website for Archaeological Events
+            </p>
+          </div>
+          <div class="col l6" style="background:#6fc3df" onclick="more('dss')">
+            <h2>Better Living London</h2>
+            <p>
+              Predicting the best places to live in London in the future.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div id="kickabout" class="kickabout" style="display:none">
@@ -159,6 +186,10 @@
 
       <div id="dss" class="dss" style="display:none">
         <div class="container">
+          <a class="btn-floating btn-large waves-effect waves-light white"
+            style="display:block;float:right" onclick="less('dss')">
+            <i style="color:#333"class="material-icons">close</i>
+          </a>
           <h2><a class="link-header" href="https://aviato-dss.herokuapp.com" target="_blank">Better Living London</a></h1>
             <div class="row">
               <div class="col s8">
@@ -186,6 +217,10 @@
 
       <div id="uclhub" class="uclhub" style="display:none">
         <div class="container">
+          <a class="btn-floating btn-large waves-effect waves-light white"
+            style="display:block;float:right" onclick="less('uclhub')">
+            <i style="color:#333"class="material-icons">close</i>
+          </a>
           <h2><a class="link-header" href="uclhub.herokuapp.com" target="_blank">UCL Heritage Hub</a></h1>
             <div class="row">
               <div class="col s8">
@@ -242,23 +277,10 @@
         ga('send', 'event', 'PDF', 'view', 'Resume');
       }
 
-      function generateTile(title, subtitle, bgcolor, more){
-         var card = document.createElement("div");
-         card.className = "card";
-         card.style.background = bgcolor;
-         var h2 = document.createElement("h2");
-         h2.innerHTML = title;
-         var p = document.createElement("p");
-         p.innerHTML = subtitle;
-
-         card.appendChild(h2);
-         card.appendChild(p);
-
-         card.addEventListener('click', function(){
-           tiles.style.display = 'none';
-           more.style.display = 'block';
-         })
-         return card
+      function more(id){
+        var item = document.getElementById(id);
+        tiles.style.display = 'none';
+        item.style.display = 'block';
       }
 
       function less(id){
@@ -266,28 +288,6 @@
         item.style.display = 'none';
         tiles.style.display = 'block';
       }
-
-      var kickabout = document.getElementById('kickabout');
-      var dss = document.getElementById('dss');
-      var uclhub = document.getElementById('uclhub');
-
-      var tiles = document.getElementById('tiles');
-      tiles.appendChild(generateTile(
-                        "Kickabout Messenger Bot",
-                        'A messenger bot to find and join football games.',
-                        '#1ED760', kickabout))
-      tiles.appendChild(generateTile(
-                        "Better Living London",
-                        'Some bot',
-                        '#6fc3df', dss))
-      // tiles.appendChild(generateTile(
-      //                   "FaceLock",
-      //                   'Chrome extension to add face locking to specific websites.',
-      //                   '#795548', facelock))
-      tiles.appendChild(generateTile(
-                        "UCL Hub",
-                        'Website for Archaeological Events',
-                        '#25A3D6', uclhub))
 
     </script>
   </body>
