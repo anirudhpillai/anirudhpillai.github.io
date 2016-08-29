@@ -1,0 +1,128 @@
+body {
+  background: #ededed;
+}
+
+.name {
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+  font-size: 24px;
+  display: block;
+}
+
+.projects p {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 24px;
+}
+
+.about {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin-bottom: 5px;
+  background: white;
+}
+
+.about p {
+  font-family: 'Fira Sans', sans-serif;
+  /*font-family: 'Fira Sans', sans-serif;*/
+  font-weight: bolder;
+  font-size: 40px;
+  /*padding-top: 60px;*/
+}
+
+h1 {
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
+  font-size: 36px;
+}
+
+h2 {
+  font-family: 'Fira Sans', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.link-header {
+  color: white;
+}
+
+.link-header:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background-color: white;
+  box-shadow: none;
+}
+
+.nav-wrapper a {
+  color: #333;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.btn-floating {
+  background-color: #F4F4F4;
+  margin-right: 6px;
+}
+
+.about .btn {
+  background-color: #F4F4F4;
+  color: #333;
+  font-weight: bold;
+  padding-left: 12px;
+  padding-right: 16px;
+}
+
+.git {
+  max-width: 54%;
+  position: relative;
+  top: 7px;
+  left: 8px;
+}
+
+.domus {
+  background: #EE7073;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.dss {
+  background: #80B1CC;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.kickabout {
+  background: #1ED760;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.kickabout .row {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.uclhub h2, .dss h2 {
+  padding-bottom: 20px;
+}
+
+.uclhub {
+  background: #25A3D6;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.chip {
+  margin-top: 6px;
+}
+
+.top-space {
+  margin-top: 20px;
+}
+
+footer.page-footer {
+  margin-top: 0px;
+  background: #3F3F3F;
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
+}
