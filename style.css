@@ -138,9 +138,6 @@ footer.page-footer {
 
 
 
-
-
-
 /* Tiles */
 .tiles .card {
   padding: 20px;
@@ -150,6 +147,18 @@ footer.page-footer {
   font-size: 44px;
   text-align: left;
   margin: 0px;
+}
+
+.tiles .btn {
+  background-color: transparent;
+  color: #fff;
+  text-transform: none;
+  font-size: 14px;
+  margin-top: 10px;
+  padding-left: 12px;
+  padding-right: 16px;
+  border: 1px solid white;
+  border-radius: 4px;
 }
 
 .tiles p {
