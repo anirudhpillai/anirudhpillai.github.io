@@ -57,8 +57,47 @@
         <h1>Projects</h1>
       </div>
 
-      <div class="kickabout">
+      <div class="tiles" id="tiles">
+        <div class="row">
+          <div class="col l8" style="background:#1ED760">
+            <h2>Kickabout Messenger Bot</h2>
+            <p>
+              A messenger bot to find and join football games.
+            </p>
+            <button class="btn z-depth-0" onclick="more('kickabout')">Read More</button>
+          </div>
+          <div class="col l4 over" style="background:#795548">
+            <h2>FaceLock</h2>
+            <p>
+              Chrome extension to add face locking to specific websites.
+            </p>
+            <button class="btn z-depth-0" onclick="more('facelock')">Read More</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l6" style="background:#25A3D6">
+            <h2>UCL Hub</h2>
+            <p>
+              Website for Archaeological Events
+            </p>
+            <button class="btn z-depth-0" onclick="more('uclhub')">Read More</button>
+          </div>
+          <div class="col l6" style="background:#6fc3df">
+            <h2>Better Living London</h2>
+            <p>
+              Predicting the best places to live in London in the future.
+            </p>
+            <button class="btn z-depth-0" onclick="more('dss')">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="kickabout" class="kickabout" style="display:none">
         <div class="container">
+          <a class="btn-floating btn-large waves-effect waves-light white"
+            style="display:block;float:right" onclick="less('kickabout')">
+            <i style="color:#333"class="material-icons">close</i>
+          </a>
           <h2><a class="link-header" href="http://m.me/kickaboutapp" target="_blank">Kickabout Messenger Bot</a></h1>
             <div class="row">
               <div class="col s4">
@@ -145,12 +184,46 @@
               </div>
             </div>
 
+            <button class="btn" onclick="less('kickabout')">All Projects</button>
         </div>
       </div>
 
-      <div class="dss">
+      <div id="facelock" class="facelock" style="display:none">
         <div class="container">
-          <h2><a class="link-header" href="https://aviato-dss.herokuapp.com" target="_blank">Microsoft Data Science Hackathon</a></h1>
+          <a class="btn-floating btn-large waves-effect waves-light white"
+            style="display:block;float:right" onclick="less('facelock')">
+            <i style="color:#333"class="material-icons">close</i>
+          </a>
+          <h2><a class="link-header" href="https://github.com/anirudhpillai/FaceLock" target="_blank">Facelock</a></h1>
+            <div class="row">
+              <div class="col s8">
+
+              </div>
+              <div class="col s4">
+                <p>
+                  A Chrome extension to add face unlock to specific websites.
+                  Won me a drone at the Microsoft re:cognition hackathon.
+                  Built using the Microsoft Cognitive Services
+                </p>
+                <div class="chip">
+                  Microsoft Cognitive Services
+                </div>
+                <div class="chip">
+                  Chrome Extension
+                </div>
+              </div>
+            </div>
+            <button class="btn" onclick="less('dss')">All Projects</button>
+        </div>
+      </div>
+
+      <div id="dss" class="dss" style="display:none">
+        <div class="container">
+          <a class="btn-floating btn-large waves-effect waves-light white"
+            style="display:block;float:right" onclick="less('dss')">
+            <i style="color:#333"class="material-icons">close</i>
+          </a>
+          <h2><a class="link-header" href="https://aviato-dss.herokuapp.com" target="_blank">Better Living London</a></h1>
             <div class="row">
               <div class="col s8">
                 <img src="dss.png" class="responsive-img z-depth-2" alt="" />
@@ -171,11 +244,16 @@
                 </div>
               </div>
             </div>
+            <button class="btn" onclick="less('dss')">All Projects</button>
         </div>
       </div>
 
-      <div class="uclhub">
+      <div id="uclhub" class="uclhub" style="display:none">
         <div class="container">
+          <a class="btn-floating btn-large waves-effect waves-light white"
+            style="display:block;float:right" onclick="less('uclhub')">
+            <i style="color:#333"class="material-icons">close</i>
+          </a>
           <h2><a class="link-header" href="uclhub.herokuapp.com" target="_blank">UCL Heritage Hub</a></h1>
             <div class="row">
               <div class="col s8">
@@ -206,6 +284,7 @@
                 </div>
               </div>
             </div>
+            <button class="btn" onclick="less('uclhub')">All Projects</button>
         </div>
       </div>
     </div>
@@ -230,6 +309,19 @@
       function test(){
         ga('send', 'event', 'PDF', 'view', 'Resume');
       }
+
+      function more(id){
+        var item = document.getElementById(id);
+        tiles.style.display = 'none';
+        item.style.display = 'block';
+      }
+
+      function less(id){
+        var item = document.getElementById(id);
+        item.style.display = 'none';
+        tiles.style.display = 'block';
+      }
+
     </script>
   </body>
 </html>
