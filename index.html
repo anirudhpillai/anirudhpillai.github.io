@@ -9,22 +9,12 @@
     <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800,900,300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Fira+Sans:700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   </head>
   <body>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-81646128-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
     <div class="about z-depth-1">
       <div class="container">
         <div class="row">
@@ -52,251 +42,11 @@
       </div>
     </div>
 
-    <div class="projects" id="projects">
-      <div class="container">
-        <h1>Projects</h1>
-      </div>
-
-      <div class="tiles" id="tiles">
-        <div class="row">
-          <div class="col l8" style="background:#1ED760">
-            <h2>Kickabout Messenger Bot</h2>
-            <p>
-              A messenger bot to find and join football games.
-            </p>
-            <button class="btn z-depth-0" onclick="more('kickabout')">Read More</button>
-          </div>
-          <div class="col l4 over" style="background:#795548">
-            <h2>FaceLock</h2>
-            <p>
-              Chrome extension to add face locking to specific websites.
-            </p>
-            <button class="btn z-depth-0" onclick="more('facelock')">Read More</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col l6" style="background:#25A3D6">
-            <h2>UCL Hub</h2>
-            <p>
-              Website for Archaeological Events
-            </p>
-            <button class="btn z-depth-0" onclick="more('uclhub')">Read More</button>
-          </div>
-          <div class="col l6" style="background:#6fc3df">
-            <h2>Better Living London</h2>
-            <p>
-              Predicting the best places to live in London in the future.
-            </p>
-            <button class="btn z-depth-0" onclick="more('dss')">Read More</button>
-          </div>
-        </div>
-      </div>
-
-      <div id="kickabout" class="kickabout" style="display:none">
-        <div class="container">
-          <a class="btn-floating btn-large waves-effect waves-light white"
-            style="display:block;float:right" onclick="less('kickabout')">
-            <i style="color:#333"class="material-icons">close</i>
-          </a>
-          <h2><a class="link-header" href="http://m.me/kickaboutapp" target="_blank">Kickabout Messenger Bot</a></h1>
-            <div class="row">
-              <div class="col s4">
-                <img src="bot.png" height="400px" alt="" />
-              </div>
-              <div class="col s8">
-                <p>
-                  Created a messenger bot which allows people to find and organise football games. It also allows booking a
-                  game by paying through credit card using the Stripe API. The bot also uses natural language processing, powered by
-                  Wit.ai, to develop a conversational tone and interact with the user.
-                  <br/>
-                  I made this from scratch during my summer internship at Activate Technologies. Used Node and Express
-                  to write the server for the bot and MongoDB database for handling users, games and analytics.
-                  <br/>
-
-                </p>
-                <div class="chip">
-                  Facebook Messenger API
-                </div>
-                <div class="chip">
-                  Wit.ai
-                </div>
-                <div class="chip">
-                  Stripe API
-                </div>
-                <div class="chip">
-                  Node
-                </div>
-                <div class="chip">
-                  Express
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col s4">
-                <p>
-                  I was also tasked with creating an analytics dashboard.
-                  I used D3.js to visualize the data and wrote custom functions to track interactions and store them
-                  in the MongoDB.
-                </p>
-                <div class="chip">
-                  D3.js
-                </div>
-                <div class="chip">
-                  MongoDB
-                </div>
-                <div class="chip">
-                  Mongoose.js
-                </div>
-              </div>
-              <div class="col s8">
-                  <img src="visualize.png" class="responsive-img z-depth-2" alt="" />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col s6">
-                <img src="stripe.png" class="responsive-img z-depth-2" alt="" />
-              </div>
-              <div class="col s6">
-                <p>
-                  I also created a user accounts system indexed by the Messenger App Scoped IDs and
-                  also used the Facebook SDK and OAuth to connect with the main Facebook ID's.
-                  This also helped with the payments system, implemented using the Stripe API, by allowing us
-                  to get information about and keep track of the people attending the games.
-
-                  I also created a secure admin interface for the company to use.
-                  The admin interface had features like a CMS for other team members to add
-                  games to the bot. I used Amazon S3 to handle images.
-                </p>
-                <div class="chip">
-                  AWS S3
-                </div>
-                <div class="chip">
-                  Facebook Javascript SDK
-                </div>
-                <div class="chip">
-                  Passport.js
-                </div>
-                <div class="chip">
-                  OAuth
-                </div>
-              </div>
-            </div>
-
-            <button class="btn" onclick="less('kickabout')">All Projects</button>
-        </div>
-      </div>
-
-      <div id="facelock" class="facelock" style="display:none">
-        <div class="container">
-          <a class="btn-floating btn-large waves-effect waves-light white"
-            style="display:block;float:right" onclick="less('facelock')">
-            <i style="color:#333"class="material-icons">close</i>
-          </a>
-          <h2><a class="link-header" href="https://github.com/anirudhpillai/FaceLock" target="_blank">Facelock</a></h1>
-            <div class="row">
-              <div class="col s8">
-
-              </div>
-              <div class="col s4">
-                <p>
-                  A Chrome extension to add face unlock to specific websites.
-                  Won me a drone at the Microsoft re:cognition hackathon.
-                  Built using the Microsoft Cognitive Services
-                </p>
-                <div class="chip">
-                  Microsoft Cognitive Services
-                </div>
-                <div class="chip">
-                  Chrome Extension
-                </div>
-              </div>
-            </div>
-            <button class="btn" onclick="less('dss')">All Projects</button>
-        </div>
-      </div>
-
-      <div id="dss" class="dss" style="display:none">
-        <div class="container">
-          <a class="btn-floating btn-large waves-effect waves-light white"
-            style="display:block;float:right" onclick="less('dss')">
-            <i style="color:#333"class="material-icons">close</i>
-          </a>
-          <h2><a class="link-header" href="https://aviato-dss.herokuapp.com" target="_blank">Better Living London</a></h1>
-            <div class="row">
-              <div class="col s8">
-                <img src="dss.png" class="responsive-img z-depth-2" alt="" />
-              </div>
-              <div class="col s4">
-                <p>
-                  Created a website which predicts the best boroughs to live in London
-                  over the next 20 years. We used Machine Learning to learn from
-                  government data from the past 15 years and D3.js for creating data
-                  visualizations. This project reached the finals of the Microsoft
-                  Data Science Hackathon.
-                </p>
-                <div class="chip">
-                  D3.js
-                </div>
-                <div class="chip">
-                  Pandas
-                </div>
-                <div class="chip">
-                  NumPy
-                </div>
-              </div>
-            </div>
-            <button class="btn" onclick="less('dss')">All Projects</button>
-        </div>
-      </div>
-
-      <div id="uclhub" class="uclhub" style="display:none">
-        <div class="container">
-          <a class="btn-floating btn-large waves-effect waves-light white"
-            style="display:block;float:right" onclick="less('uclhub')">
-            <i style="color:#333"class="material-icons">close</i>
-          </a>
-          <h2><a class="link-header" href="uclhub.herokuapp.com" target="_blank">UCL Heritage Hub</a></h1>
-            <div class="row">
-              <div class="col s8">
-                <img src="uclhub.png" class="responsive-img z-depth-2" alt="" />
-              </div>
-              <div class="col s4">
-                <p>
-                  Made for the UCL Institute of Archaeology. Used Meteor and did both the front end and backend.
-                  Also did stress testing and unit testing.
-                </p>
-                <div class="chip">
-                  Meteor
-                </div>
-                <div class="chip">
-                  Materialize CSS
-                </div>
-                <div class="chip">
-                  Mocha
-                </div>
-                <div class="chip">
-                  AWS
-                </div>
-                <div class="chip">
-                  MongoDB
-                </div>
-                <div class="chip">
-                  Heroku
-                </div>
-              </div>
-            </div>
-            <button class="btn" onclick="less('uclhub')">All Projects</button>
-        </div>
-      </div>
-    </div>
-
     <footer class="page-footer" id="contact">
       <div class="container">
         <div class="row">
           <h4 class="white-text">Contact Me</h4>
-          <p class="grey-text text-lighten-4">a.pillai@cs.ucl.ac.uk</p>
+          <p class="grey-text text-lighten-4">ani@ucl.ac.uk</p>
           <p class="grey-text text-lighten-4">Thanks, check back later for more projects.</p>
         </div>
       </div>
@@ -307,24 +57,7 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script type="text/javascript">
-      function test(){
-        ga('send', 'event', 'PDF', 'view', 'Resume');
-      }
+    <script src="graph.js"></script>
 
-      function more(id){
-        var item = document.getElementById(id);
-        tiles.style.display = 'none';
-        item.style.display = 'block';
-      }
-
-      function less(id){
-        var item = document.getElementById(id);
-        item.style.display = 'none';
-        tiles.style.display = 'block';
-      }
-
-    </script>
   </body>
 </html>
