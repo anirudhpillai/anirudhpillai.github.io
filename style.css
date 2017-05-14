@@ -5,7 +5,8 @@ body {
 .name {
   font-family: 'Alegreya', serif;
   font-style: italic;
-  font-size: 24px;
+  font-size: 34px;
+  /*font-weight: bold;*/
   display: block;
 }
 
@@ -65,6 +66,17 @@ nav {
   font-weight: bold;
   padding-left: 12px;
   padding-right: 16px;
+}
+
+.projects {
+  background: #005689;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.projects h1 {
+  margin: 0px;
+  color: white;
 }
 
 .git {
