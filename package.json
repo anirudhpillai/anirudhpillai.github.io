@@ -1,9 +1,9 @@
 {
-  "name": "me",
+  "name": "Portfolio",
   "version": "1.0.0",
   "description": "Anirudh's Portfolio",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --port 3000",
     "prod": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

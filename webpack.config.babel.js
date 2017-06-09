@@ -8,11 +8,11 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 })
 
-module.exports = {
+export default () => ({
   entry: './src/index.js',
   output: {
-    path: path.resolve('dist'),
-    filename: 'index_bundle.js'
+    path: path.resolve('./'),
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -21,4 +21,4 @@ module.exports = {
     ]
   },
   plugins: [HtmlWebpackPluginConfig]
-}
+})
