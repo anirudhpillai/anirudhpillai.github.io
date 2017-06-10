@@ -1,0 +1,101 @@
+body {
+  background: #ededed;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin-bottom: 5px;
+  background: white;
+}
+
+.header p {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+h1 {
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
+  font-size: 36px;
+}
+
+h2 {
+  font-family: 'Fira Sans', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.link-header {
+  color: white;
+}
+
+.link-header:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background-color: white;
+  box-shadow: none;
+}
+
+.nav-wrapper a {
+  color: #333;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.btn-floating {
+  background-color: #F4F4F4;
+  margin-right: 6px;
+}
+
+.header .btn {
+  background-color: #F4F4F4;
+  color: #333;
+  font-weight: bold;
+  padding-left: 12px;
+  padding-right: 16px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  margin: 10px;
+  min-width: 200px;
+  width: 25%;
+}
+
+.project img {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.project .card p {
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 28px;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+}
+
+.git {
+  max-width: 54%;
+  position: relative;
+  top: 7px;
+  left: 8px;
+}
+
+footer.page-footer {
+  margin-top: 0px;
+  background: #3F3F3F;
+  text-align: center;
+}
