@@ -4,26 +4,27 @@ body {
 }
 
 .header {
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 10px;
   margin-bottom: 5px;
   background: white;
 }
 
+.header h3 {
+
+}
+
 .header p {
-  font-family: 'Fira Sans', sans-serif;
   font-weight: bolder;
   font-size: 40px;
 }
 
 h1 {
-  font-family: 'Alegreya Sans', sans-serif;
   text-align: center;
   font-size: 36px;
 }
 
 h2 {
-  font-family: 'Fira Sans', sans-serif;
   color: white;
   text-align: center;
 }
@@ -36,19 +37,16 @@ h2 {
   text-decoration: underline;
 }
 
-nav {
-  background-color: white;
-  box-shadow: none;
-}
-
-.nav-wrapper a {
-  color: #333;
-  font-family: 'Alegreya Sans', sans-serif;
-}
-
 .btn-floating {
   background-color: #F4F4F4;
   margin-right: 6px;
+}
+
+.git {
+  max-width: 54%;
+  position: relative;
+  top: 7px;
+  left: 8px;
 }
 
 .header .btn {
@@ -59,40 +57,44 @@ nav {
   padding-right: 16px;
 }
 
+
+/* Projects */
+
 .projects {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.project {
+.project .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 10px;
-  min-width: 200px;
-  width: 25%;
-}
-
-.project img {
-  width: 60%;
-  display: block;
-  margin: 0 auto;
-}
-
-.project .card p {
+  min-width: 400px;
+  width: 40vw;
   text-align: center;
+  min-height: 20vw;
+}
+
+.project .card .card-title {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.project a {
+  color: inherit;
 }
 
 .card h3 {
   font-size: 28px;
-  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
   text-align: center;
 }
 
-.git {
-  max-width: 54%;
-  position: relative;
-  top: 7px;
-  left: 8px;
-}
+
+/* Footer */
 
 footer.page-footer {
   margin-top: 0px;

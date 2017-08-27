@@ -1,5 +1,6 @@
 import React from 'react';
 
+import profilePic from './../img/profile.jpg'
 
 export default class Header extends React.Component {
 
@@ -19,7 +20,7 @@ export default class Header extends React.Component {
                 <a href="#contact" className="btn-floating waves-effect waves-light"><img className="git" src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/mail-24-128.png" alt="" /></a>
               </div>
               <div className="col s4">
-                <img src="profile.jpg" className="responsive-img" alt="" />
+                <img src={profilePic} className="responsive-img" alt="" />
               </div>
             </div>
           </div>
