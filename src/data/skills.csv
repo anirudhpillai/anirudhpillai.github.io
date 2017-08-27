@@ -1,0 +1,24 @@
+skill,level,type
+Python,100,Python
+Javascript,80,Javascript
+Java,70,Java
+Haskell,20,Haskell
+Linux,80,Linux
+Shell Scripting,30,Linux
+C,30,Linux
+PostgreSQL,20,Linux
+MongoDB,20,Linux
+Elasticsearch,60,Linux
+Ubuntu,90,Linux
+CentOS,50,Linux
+D3,50,Javascript
+Django,50,Python
+Pandas,30,Python
+React,50,Javascript
+Flask,50,Python
+NGINX,30,Linux
+Grafana,60,Linux
+AWS,50,Linux
+Git,60,Linux
+Travis CI,20,Linux
+Docker,20,Linux
