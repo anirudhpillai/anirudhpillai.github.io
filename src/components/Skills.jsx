@@ -7,7 +7,7 @@ import skills from './../data/skills.csv';
 export default class Skills extends React.Component {
 
     componentDidMount() {
-      let width = window.innerWidth, height = window.innerHeight, sizeDivisor = 100, nodePadding = 10;
+      let width = window.innerWidth - 100, height = window.innerHeight, sizeDivisor = 100, nodePadding = 10;
 
       let svg = d3.select(".skills").append("svg")
         .attr("width", width)
@@ -22,31 +22,43 @@ export default class Skills extends React.Component {
         .force("center", d3.forceCenter().x(width * .5).y(height * .5))
         .force("charge", d3.forceManyBody().strength(-15));
 
-      let node = svg.append("g")
-          .attr("class", "node")
-        .selectAll("circle")
-        .data(skills)
-        .enter().append("circle")
-          .attr("r", (d) => { return d.level; })
-          .attr("fill", (d) => { return color(d.type); })
-          .attr("text", function(d) { return color(d.skill); })
-          .attr("cx", (d) => { return d.x; })
-          .attr("cy", (d) => { return d.y; })
-          .call(d3.drag()
-              .on("start", (d) => {
-                if (!d3.event.active) simulation.alphaTarget(.03).restart();
-                d.fx = d.x;
-                d.fy = d.y;
-              })
-              .on("drag", (d) => {
-                d.fx = d3.event.x;
-                d.fy = d3.event.y;
-              })
-              .on("end", (d) => {
-                if (!d3.event.active) simulation.alphaTarget(.03);
-                d.fx = null;
-                d.fy = null;
-              }));
+      let node = svg.selectAll(".node")
+
+      node = node.data(skills)
+
+      node = node.enter()
+        .append("g")
+        .attr("class", "node")
+        .call(d3.drag()
+            .on("start", (d) => {
+              if (!d3.event.active) simulation.alphaTarget(.03).restart();
+              d.fx = d.x;
+              d.fy = d.y;
+            })
+            .on("drag", (d) => {
+              d.fx = d3.event.x;
+              d.fy = d3.event.y;
+            })
+            .on("end", (d) => {
+              if (!d3.event.active) simulation.alphaTarget(.03);
+              d.fx = null;
+              d.fy = null;
+            }))
+
+      node.append("circle")
+        .attr("r", (d) => { return d.level; })
+        .attr("fill", (d) => { return color(d.type); })
+        .attr("cx", (d) => { return d.x; })
+        .attr("cy", (d) => { return d.y; })
+
+      node.append('text')
+        .attr('dx', 0)
+        .attr('dy', 0)
+        .attr('fill', '#333')
+        .attr('font-size', '12px')
+        .attr('text-anchor', 'middle')
+        // .attr('font-weight', 'bold')
+        .text((d) => { return d.skill })
 
       simulation
           .nodes(skills)
@@ -57,16 +69,21 @@ export default class Skills extends React.Component {
             }).iterations(1)
           )
           .on("tick", (d) => {
-            node
-              .attr("cx", (d) => { return d.x; })
-              .attr("cy", (d) => { return d.y; })
+            // node
+            //   .attr("cx", (d) => { return d.x; })
+            //   .attr("cy", (d) => { return d.y; })
+            node.attr("transform", function(d){
+              return "translate(" + d.x + "," + d.y + ")";
+            })
           });
 
     }
 
     render() {
       return (
-        <div className="skills"></div>
+        <div className="skills">
+          <h1>Skills</h1>
+        </div>
       )
     }
 
