@@ -105,6 +105,13 @@ h2 {
 }
 
 
+/* Interests */
+.interests svg {
+  display: block;
+  margin: 0 auto;
+}
+
+
 /* Footer */
 
 footer.page-footer {
