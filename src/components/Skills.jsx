@@ -9,7 +9,7 @@ export default class Skills extends React.Component {
     componentDidMount() {
       let width = window.innerWidth - 100, height = window.innerHeight, sizeDivisor = 100, nodePadding = 10;
 
-      let svg = d3.select(".skills").append("svg")
+      let svg = d3.select(".skillsGraph").append("svg")
         .attr("width", width)
         .attr("height", height);
 
@@ -83,6 +83,8 @@ export default class Skills extends React.Component {
       return (
         <div className="skills">
           <h1>Skills</h1>
+          <div className="skillsGraph">
+          </div>
         </div>
       )
     }
