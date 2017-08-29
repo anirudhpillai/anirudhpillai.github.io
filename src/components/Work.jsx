@@ -5,7 +5,7 @@ import * as d3 from "d3";
 export default class Work extends React.Component {
 
     componentDidMount() {
-      let width = window.innerWidth - 100, height = window.innerHeight;
+      let width = window.innerWidth - 20, height = window.innerHeight;
       let svg = d3.select(".workGraph").append("svg")
         .attr("width", width)
         .attr("height", height);
