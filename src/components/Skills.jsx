@@ -69,9 +69,6 @@ export default class Skills extends React.Component {
             }).iterations(1)
           )
           .on("tick", (d) => {
-            // node
-            //   .attr("cx", (d) => { return d.x; })
-            //   .attr("cy", (d) => { return d.y; })
             node.attr("transform", function(d){
               return "translate(" + d.x + "," + d.y + ")";
             })

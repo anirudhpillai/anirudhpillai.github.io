@@ -1,6 +1,5 @@
 body {
   background: #ededed;
-  font-family: 'Roboto', sans-serif;
 }
 
 .header {
@@ -11,7 +10,12 @@ body {
 }
 
 .header h3 {
+  font-family: 'Permanent Marker', cursive;
+  /*font-family: 'Cookie', cursive;*/
+}
 
+.header .row {
+  margin-bottom: 0px;
 }
 
 .header p {
@@ -104,6 +108,11 @@ h2 {
   margin-bottom: 40px;
 }
 
+/* Work */
+.work svg {
+  display: block;
+  margin: 0 auto;
+}
 
 /* Interests */
 .interests svg {
