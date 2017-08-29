@@ -13,11 +13,6 @@ export default class Footer extends React.Component {
               <p className="grey-text text-lighten-4">Thanks, check back later for more projects.</p>
             </div>
           </div>
-          <div className="footer-copyright">
-            <div className="container">
-            &copy; 2017 Anirudh Pillai
-            </div>
-          </div>
         </footer>
       )
     }

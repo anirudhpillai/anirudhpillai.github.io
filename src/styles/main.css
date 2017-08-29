@@ -2,6 +2,10 @@ body {
   background: #ededed;
 }
 
+.row {
+  margin-bottom: 0px;
+}
+
 .header {
   padding-top: 30px;
   padding-bottom: 10px;
@@ -12,10 +16,6 @@ body {
 .header h3 {
   font-family: 'Permanent Marker', cursive;
   /*font-family: 'Cookie', cursive;*/
-}
-
-.header .row {
-  margin-bottom: 0px;
 }
 
 .header p {
@@ -80,6 +80,7 @@ h2 {
   width: 40vw;
   text-align: center;
   min-height: 20vw;
+  color: white;
 }
 
 .project .card .card-title {
@@ -127,4 +128,5 @@ footer.page-footer {
   margin-top: 0px;
   background: #3F3F3F;
   text-align: center;
+  padding-bottom: 20px;
 }
