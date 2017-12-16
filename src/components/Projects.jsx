@@ -36,7 +36,7 @@ let projects = [
 
 const Project = (project, key) => (
     <div className="project" key={key}>
-      <a href={project.link}><h2>{project.title}</h2></a>
+      <a href={project.link} target="_blank"><h2>{project.title}</h2></a>
       <p>{project.description}</p>
     </div>
 )
