@@ -32,24 +32,12 @@ let projects = [
     link: "https://github.com/anirudhpillai/dotfiles",
     color: 'brown darken-4'
   },
-  {
-    title: "FaceLock",
-    description: "A Chrome extension to add face unlock to specific websites. Created at the Microsoft re:cognition hackathon. Built using the Microsoft Cognitive Services",
-    link: "https://github.com/anirudhpillai/FaceLock",
-    color: 'brown'
-  }
 ]
 
 const Project = (project, key) => (
     <div className="project" key={key}>
-      <a href={project.link}>
-        <div className={"card " + project.color}>
-          <div className="card-content">
-            <span className="card-title">{project.title}</span>
-            <p>{project.description}</p>
-          </div>
-        </div>
-      </a>
+      <a href={project.link}><h2>{project.title}</h2></a>
+      <p>{project.description}</p>
     </div>
 )
 
@@ -57,10 +45,12 @@ export default class Projects extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Projects</h1>
-        <div className="projects">
-          {projects.map((p, i) => Project(p, i))}
+      <div className="projects">
+        <div className="container">
+          <h1>Projects</h1>
+          <div className="projects">
+            {projects.map((p, i) => Project(p, i))}
+          </div>
         </div>
       </div>
     )
