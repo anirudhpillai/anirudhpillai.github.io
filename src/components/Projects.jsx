@@ -48,7 +48,7 @@ export default class Projects extends React.Component {
       <div className="projects">
         <div className="container">
           <h1>Projects</h1>
-          <div className="projects">
+          <div>
             {projects.map((p, i) => Project(p, i))}
           </div>
         </div>
